@@ -60,3 +60,17 @@ test('counter increments when button is clicked', () => {
 	const count = findByTestAttr(wrapper, 'count').text();
 	expect(count).toBe('1');
 });
+
+test('counter decrements when button is clicked', () => {
+	const wrapper = setup();
+	const buttonIncrements = findByTestAttr(wrapper, 'increment-button');
+	buttonIncrements.simulate('click');
+
+	//find button and click
+	const buttonDecrement = findByTestAttr(wrapper, 'decrement-button');
+	buttonDecrement.simulate('click');
+
+	//check counter
+	const countMinus = findByTestAttr(wrapper, 'count').text();
+	expect(countMinus).toBe('0');
+});
