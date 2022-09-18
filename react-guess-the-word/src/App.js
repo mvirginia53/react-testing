@@ -22,7 +22,7 @@ function App() {
 
 	return (
 		<div data-test='component-app' className='container'>
-			<h1>Jotto</h1>
+			<h1>Guess the word</h1>
 			<div class='collapse' id='collapseExample'>
 				<div class='card card-body'>the secret word is {secretWord}</div>
 			</div>
